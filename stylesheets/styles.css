@@ -140,7 +140,7 @@ header ul a {
 
 strong {
   color:#222;
-  font-weight:700;
+  font-weight:800;
 }
 
 header ul li + li {
@@ -163,6 +163,8 @@ section {
   width:500px;
   float:right;
   padding-bottom:50px;
+  color:black;
+  font-weight:600;
 }
 
 small {
