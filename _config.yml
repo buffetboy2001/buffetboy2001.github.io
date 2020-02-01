@@ -1,0 +1,8 @@
+title: buffetboy2001.github.io
+description: My github.io project for public documentation purposes.
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-tactile
+
+gems:
+  - jekyll-mentions
