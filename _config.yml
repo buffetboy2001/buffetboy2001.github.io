@@ -27,6 +27,9 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.aerosci.dev" # the base hostname & protocol for the site
 github_username:  buffetboy2001
+logo: "/assets/images/peto_logo.jpg"
+breadcrumbs: true  # disabled by default. This can be fragile, so may need to turn off
+search: true
 
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.18.1"
@@ -36,6 +39,21 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
   # - jemoji
+author:
+  name: "Stuart Bowman"
+  avatar: "/assets/images/peto_logo.jpg"
+  bio: "I'm an aerospace engineer who loves writing scientific software for the research community." # Note: Markdown is allowed
+  location: "Southwest Virginia, USA"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/buffetboy2001"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/stuart-bowman-aa2b48/"
+    - label: "US-RSE"
+      icon: "fab fa-fw fa-slack"
+      url: "https://us-rse.org"
 
 defaults:
 # _posts
@@ -46,7 +64,7 @@ defaults:
     layout: single
     author_profile: true
     read_time: true
-    comments: true
+    comments: false   #hmm...not sure I want this on
     share: true
     related: true
 
