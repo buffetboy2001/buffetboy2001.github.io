@@ -39,11 +39,12 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
   # - jemoji
+
 author:
   name: "Stuart Bowman"
   avatar: "/assets/images/peto_logo.jpg"
   bio: "I'm an aerospace engineer who loves writing scientific software for the research community." # Note: Markdown is allowed
-  location: "Southwest Virginia, USA"
+  location: "Roanoke, Virginia, USA"
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
@@ -51,9 +52,9 @@ author:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/stuart-bowman-aa2b48/"
-    - label: "US-RSE"
+    - label: "Slack (USRSE workspace)"
       icon: "fab fa-fw fa-slack"
-      url: "https://us-rse.org"
+      url: "https://usrse.slack.com"
 
 defaults:
 # _posts
@@ -77,12 +78,12 @@ defaults:
 # their entries' file path in the `include:` list.
 #
 exclude:
-    - TODO.md
-#   - .sass-cache/
-#   - .jekyll-cache/
+  - TODO.md
+  - .sass-cache/
+  - .jekyll-cache/
 #   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
+  - Gemfile
+  - Gemfile.lock
 #   - node_modules/
 #   - vendor/bundle/
 #   - vendor/cache/
