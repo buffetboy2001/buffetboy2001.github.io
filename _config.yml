@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: aerosci.dev | thoughts on the union of aerospace engineering and scientific software development 
+title: aerosci.dev | aerospace engineering, scientific software development, other science-y thoughts 
 email: bowman.d.stuart@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   A blog by Stuart Bowman covering thoughts on the union of 
@@ -28,13 +28,14 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.aerosci.dev" # the base hostname & protocol for the site
 github_username:  buffetboy2001
 logo: "/assets/images/peto_logo.jpg"
-breadcrumbs: true  # disabled by default. This can be fragile, so may need to turn off
+breadcrumbs: false  # disabled by default. This can be fragile, so may need to turn off
 search: true
+repository: "buffetboy2001/https://github.com/buffetboy2001/buffetboy2001.github.io"
 
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.18.1"
 theme: minimal-mistakes-jekyll
-minimal_mistakes_skin: "air"
+minimal_mistakes_skin: "dirt"
 plugins:
   - jekyll-feed
   - jekyll-include-cache
@@ -64,10 +65,20 @@ defaults:
   values:
     layout: single
     author_profile: true
-    read_time: true
-    comments: false   #hmm...not sure I want this on
-    share: true
+    read_time: false
+    comments: false   # to enable comment services (e.g. facebook)...not sure I want this on & not ready to experiment
+    share: false  # this footer banner (on the posts page) is for sharing on LinkedIn, Facebook, Twitter
     related: true
+
+# Control the social media options that go into minimal-mistakes footer
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/buffetboy2001"
+    # - label: "Instagram"
+    #   icon: "fab fa-fw fa-instagram"
+    #   url: "https://instagram.com/aerosci.dev"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
