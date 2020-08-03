@@ -1,8 +1,102 @@
-title: buffetboy2001.github.io
-description: My github.io project for public documentation purposes.
-google_analytics: 
-show_downloads: true
-theme: jekyll-theme-tactile
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you: 
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
 
-gems:
-  - jekyll-mentions
+title: aerosci.dev | aerospace engineering, scientific software development, other science-y thoughts 
+email: bowman.d.stuart@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  A blog by Stuart Bowman covering thoughts on the union of 
+  aerospace engineering and scientific software development. And...
+  other stuff that matters to me of a generally professional nature :) 
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://www.aerosci.dev" # the base hostname & protocol for the site
+github_username:  buffetboy2001
+logo: "/assets/images/peto_logo.jpg"
+breadcrumbs: false  # disabled by default. This can be fragile, so may need to turn off
+search: true
+repository: "buffetboy2001/https://github.com/buffetboy2001/buffetboy2001.github.io"
+
+# Build settings
+remote_theme: "mmistakes/minimal-mistakes@4.18.1"
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: "dirt"
+plugins:
+  - jekyll-feed
+  - jekyll-include-cache
+  # - jemoji
+
+author:
+  name: "Stuart Bowman"
+  avatar: "/assets/images/peto_logo.jpg"
+  bio: "I'm an aerospace engineer who loves writing scientific software for the research community." # Note: Markdown is allowed
+  location: "Roanoke, Virginia, USA"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/buffetboy2001"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/stuart-bowman-aa2b48/"
+    - label: "Slack (USRSE workspace)"
+      icon: "fab fa-fw fa-slack"
+      url: "https://usrse.slack.com"
+
+defaults:
+# _posts
+- scope:
+    path: ""
+    type: posts
+  values:
+    layout: single
+    author_profile: true
+    read_time: false
+    comments: false   # to enable comment services (e.g. facebook)...not sure I want this on & not ready to experiment
+    share: false  # this footer banner (on the posts page) is for sharing on LinkedIn, Facebook, Twitter
+    related: true
+
+# Control the social media options that go into minimal-mistakes footer
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/buffetboy2001"
+    # - label: "Instagram"
+    #   icon: "fab fa-fw fa-instagram"
+    #   url: "https://instagram.com/aerosci.dev"
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+exclude:
+  - TODO.md
+  - .sass-cache/
+  - .jekyll-cache/
+#   - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
