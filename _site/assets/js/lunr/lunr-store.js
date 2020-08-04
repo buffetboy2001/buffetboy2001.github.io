@@ -1,6 +1,11 @@
 var store = [{
-        "title": "Welcome to Jekyll!",
-        "excerpt":"You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when...","categories": ["jekyll","update"],
+        "title": "Regression Testing: Drawing Lines in the Sand",
+        "excerpt":"I had a legacy project at work that I took over a few years ago…  ","categories": ["testing,","software","best-practices"],
         "tags": [],
-        "url": "https://www.aerosci.dev/jekyll/update/2020/01/31/welcome-to-jekyll.html",
+        "url": "http://localhost:4000/testing,/software/best-practices/2020/08/03/regression-testing.html",
+        "teaser":null},{
+        "title": "Regression Testing: Drawing Lines in the Sand",
+        "excerpt":"I had a legacy project at work that I took over a few years ago…  ","categories": ["testing,","software","best-practices"],
+        "tags": [],
+        "url": "http://localhost:4000/testing,/software/best-practices/2020/08/03/regression-testing.html",
         "teaser":null}]
