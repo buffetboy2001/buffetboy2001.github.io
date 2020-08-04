@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: aerosci.dev | aerospace engineering, scientific software development, other science-y thoughts 
+title: aerosci.dev | aerospace engineering, scientific software development, & other science-y thoughts 
 email: bowman.d.stuart@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   A blog by Stuart Bowman covering thoughts on the union of 
