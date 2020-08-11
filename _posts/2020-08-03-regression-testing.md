@@ -2,15 +2,15 @@
 layout: single
 title:  "Regression Testing: Drawing Lines in the Sand"
 date:  2020-08-03
-tags: testing
-excerpt: Every time my team touched the code, we ran the risk of changing important output results -- without even knowing it.
+tags: #testing
+excerpt: Every time my development team touched the code to introduce a new research feature, we ran the risk of changing historically accepted output results -- without even knowing it.
 ---
 
 I had a legacy project at work that I took over a few years ago, stepping in for a co-worker whose role was expanding and she needed to hand off the software development of the project. It was a great opportunity for me to join a new research project and a great opportunity to jump into that regime of scientific code that I love best: time-stepping simulations.
 
-But, there was a challenge. This was legacy code that was well respected and had a public history of results. The code and results had been used for published papers and also to build the case with research sponsors for why the research should continue. The code and it's results were considered correct, trustworthy, and reliable. This was code that Eric Winsburg would call "XXX".
+But, there was a challenge. This was legacy code that was well respected and had a public history of results. The code had been used to produce results for published papers and also to build the case with research sponsors for why the research should continue. The code -- and it's results -- were considered correct, trustworthy, and reliable. They were a sanctioned entity.
 
-**My Challenge** As the new software lead, I had no part of that code history. I had no idea which revision of the software had been used for those trusted, published results. Fortunately, the code that I received was configuration managed at a basic level (yay!), but not rigorously. There were no tags, no issue management, no obvious branching methodology, no continuity of a development team. And we had development work to do -- changes to get working on. Every time my development team touched the code to introduce a new research feature, we ran the risk of changing historically accepted output results -- without even knowing it. :(
+**My Challenge** As the new software lead, I had no part of that history. No part of the process that had made it all sanctioned. I had no idea which revision of the software had been used for those trusted, published results. Fortunately, the code that I received was configuration managed at a basic level (yay!), but not rigorously. There were no CM tags, no issue management, no obvious branching methodology, no continuity of a development team. And we had development work to do, changes to get working on. Every time my development team touched the code to introduce a new research feature, we ran the risk of changing historically accepted output results -- without even knowing it. :(
 
 Taking over that project felt like walking through an unlit room full of furniture. We needed shin guards! We had to get some control over the situation before one of our "bug fixes" or "new features" made the code untrustworthy.
 
