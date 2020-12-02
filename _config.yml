@@ -31,6 +31,7 @@ logo: "/assets/images/peto_logo.jpg"
 breadcrumbs: false  # disabled by default. This can be fragile, so may need to turn off
 search: true
 repository: "buffetboy2001/https://github.com/buffetboy2001/buffetboy2001.github.io"
+markdown: kramdown
 
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.18.1"

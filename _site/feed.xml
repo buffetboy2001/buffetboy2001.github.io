@@ -1,1 +1,82 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-03T22:21:41-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">aerosci.dev | aerospace engineering, scientific software, &amp;amp; other science-y thoughts</title><subtitle>A blog by Stuart Bowman covering thoughts on the union of  aerospace engineering and scientific software development. And... other stuff that matters to me of a generally professional nature :) </subtitle><author><name>Stuart Bowman</name></author><entry><title type="html">Regression Testing: Drawing Lines in the Sand</title><link href="http://localhost:4000/testing,/software/best-practices/2020/08/03/regression-testing.html" rel="alternate" type="text/html" title="Regression Testing: Drawing Lines in the Sand" /><published>2020-08-03T00:00:00-04:00</published><updated>2020-08-03T00:00:00-04:00</updated><id>http://localhost:4000/testing,/software/best-practices/2020/08/03/regression-testing</id><content type="html" xml:base="http://localhost:4000/testing,/software/best-practices/2020/08/03/regression-testing.html">&lt;p&gt;I had a legacy project at work that I took over a few years ago…&lt;/p&gt;</content><author><name>Stuart Bowman</name></author><summary type="html">Every time my team touched the code, we ran the risk of changing important output results -- without even knowing it.</summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-12-01T23:07:33-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">aerosci.dev | aerospace engineering, scientific software, &amp;amp; other science-y thoughts</title><subtitle>A blog by Stuart Bowman covering thoughts on the union of  aerospace engineering and scientific software development. And... other stuff that matters to me of a generally professional nature :) </subtitle><author><name>Stuart Bowman</name></author><entry><title type="html">Guidance Algorithm: Left or Right Side of the Line</title><link href="http://localhost:4000/2020/12/01/left-right-side-of-line.html" rel="alternate" type="text/html" title="Guidance Algorithm: Left or Right Side of the Line" /><published>2020-12-01T00:00:00-05:00</published><updated>2020-12-01T00:00:00-05:00</updated><id>http://localhost:4000/2020/12/01/left-right-side-of-line</id><content type="html" xml:base="http://localhost:4000/2020/12/01/left-right-side-of-line.html">&lt;p&gt;I was working on a very interesting (and frustrating) algorithm recently at work that really messed with my head. After I had it solved and behind me, I decided to put it into prose and post it here – just in case my future self needs a reminder of how it works. Hope you find it useful too!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Problem Statement&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Given an arbitrary line on the surface of an ellipsoid with known start and end points (implying directionality); and given an arbitrary point that is not on the line (known within some reasonably small tolerance that is « the line length); determine which side (e.g. LEFT or RIGHT) of the line the point lies on.&lt;/p&gt;
+
+&lt;p&gt;Quick drawing:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2020/12/2020-12-1-ecef-depiction.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Background&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This exact problem occurs routinely in automated path-following guidance algorithms that build their paths on the earth surface. The vehicle will rarely be exactly “on the path”, so the obvious question to answer before determining a control response is: on which side of path is the vehicle?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In a flat-earth Euclidean world, this problem is easily solved using &lt;a href=&quot;https://en.wikipedia.org/wiki/Cross_product&quot;&gt;cross-vectors&lt;/a&gt;. To me, the challenge occurred (mentally) once I defined the line as being a geodesic on an ellipsoid.&lt;/p&gt;
+
+&lt;p&gt;Turns out it’s not that hard. You still use a cross-product. Vector-calc win, peeps!&lt;/p&gt;
+
+&lt;p&gt;Here we go. (Use the diagram above as reference.)&lt;/p&gt;
+
+&lt;p&gt;Solve for the course, $course_\text{at start point}$ of the line at the start point, $P_\text{start}$. Let this be defined in the &lt;a href=&quot;https://en.wikipedia.org/wiki/Local_tangent_plane_coordinates#Local_north,_east,_down_(NED)_coordinates&quot;&gt;NED Frame&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Solve for a point $P_\text{perpendicular}$ that lies on the line and that represents a perpendicular projection from point $P_\text{off-line}$ to the line.&lt;/p&gt;
+
+&lt;p&gt;Let there be a vector $\vec{C}$ that is in the &lt;a href=&quot;https://en.wikipedia.org/wiki/ECEF&quot;&gt;ECEF Frame&lt;/a&gt; and points to the point $P_\text{off-line}$.&lt;/p&gt;
+
+&lt;p&gt;Let there be a vector $\vec{D}$ that is in the ECEF Frame and points to the point $P_\text{perpendicular}$.&lt;/p&gt;
+
+&lt;p&gt;Take the cross-product of the two vectors to determine a new vector $V$ that is orthogonal to $P_\text{perpendicular}$ and $P_\text{off-line}$.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{V} = \vec{C} \times \vec{D}&lt;/script&gt;
+
+&lt;p&gt;The components of $\vec{V}$ contain the information for our solution. We can examine the signs of the terms in $\vec{V}$ and determine on which side of our line $P_\text{off-line}$ exists.&lt;/p&gt;
+
+&lt;p&gt;If we constrain our solution space to being for lines on the continent of North America, the algorithm looks like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if $course_\text{at start point}$ is approximately 90 degrees:
+    $V_x is negative, ON_LEFT_SIDE$
+    $V_x is positive, ON_RIGHT_SIDE$
+
+if $course_\text{at start point}$ is approximately 270 degrees:
+    $V_x is negative, ON_RIGHT_SIDE$
+    $V_x is positive, ON_LEFT_SIDE$
+
+if $course_\text{at start point}$ is positive:
+    $V_z is negative, ON_LEFT_SIDE$
+    $V_z is positive, ON_RIGHT_SIDE$
+
+if $course_\text{at start point}$ is negative:
+    $V_z is negative, ON_RIGHT_SIDE$
+    $V_z is positive, ON_LEFT_SIDE$
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Of course, I constrained my solution to a particular region of the globe. But, if you’re thinking about the geometry here, you’ll find a way to expand this into a more general solution.&lt;/p&gt;
+
+&lt;p&gt;Do you have a better way to solve this? &lt;a href=&quot;https://github.com/buffetboy2001/buffetboy2001.github.io/issues&quot;&gt;Let me know by opening a GitHub issue!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;When I get the chance, I’ll post an implementation of this in a Jupyter Notebook. :thumbsup:&lt;/p&gt;</content><author><name>Stuart Bowman</name></author><category term="algorithms" /><summary type="html">For a line on an ellipsoid and a point not on the line, on which side of the line does the point exist?</summary></entry><entry><title type="html">Regression Testing: Drawing Lines in the Sand</title><link href="http://localhost:4000/2020/08/03/regression-testing.html" rel="alternate" type="text/html" title="Regression Testing: Drawing Lines in the Sand" /><published>2020-08-03T00:00:00-04:00</published><updated>2020-08-03T00:00:00-04:00</updated><id>http://localhost:4000/2020/08/03/regression-testing</id><content type="html" xml:base="http://localhost:4000/2020/08/03/regression-testing.html">&lt;p&gt;I had a legacy project at work that I took over a few years ago, stepping in for a co-worker whose role was expanding and she needed to hand off the software development of the project. It was a great opportunity for me to join a new research project and a great opportunity to jump into that regime of scientific code that I love best: time-stepping simulations.&lt;/p&gt;
+
+&lt;p&gt;But, there was a challenge. This was legacy code that was well respected and had a public history of results. The code had been used to produce results for published papers and also to build the case with research sponsors for why the research should continue. The code – and it’s results – were considered correct, trustworthy, and reliable. They were a sanctioned entity.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;My Challenge&lt;/strong&gt; As the new software lead, I had no part of that history. No part of the process that had made it all sanctioned. I had no idea which revision of the software had been used for those trusted, published results. Fortunately, the code that I received was configuration managed at a basic level (yay!), but not rigorously. There were no CM tags, no issue management, no obvious branching methodology, no continuity of a development team. And we had development work to do, changes to get working on. Every time my development team touched the code to introduce a new research feature, we ran the risk of changing historically accepted output results – without even knowing it. :(&lt;/p&gt;
+
+&lt;p&gt;Taking over that project felt like walking through an unlit room full of furniture. We needed shin guards! We had to get some control over the situation before one of our “bug fixes” or “new features” made the code untrustworthy.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Enter Regression Testing&lt;/strong&gt; Regression testing is like drawing lines in the sand. It connects code revisions to input files and output results and makes them a semi-gelatinous thing. For scientific code, the results are not necessarily “truth”, just currently accepted results. They are a baseline of results that can be used to help identify changing results.&lt;/p&gt;
+
+&lt;p&gt;Did you catch my wording there? Two important adjectives: &lt;code class=&quot;highlighter-rouge&quot;&gt;currently&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;accepted&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Currently&lt;/em&gt;. The honest truth is that scientific code results do change. Ok, maybe not the trivial ones, but certainly the complex results that we care about. The ones that we were searching for, that force us to write research software in the first place. We need to expect changes to results and plan for it.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Accepted&lt;/em&gt;. Sometimes we don’t know if our research software is giving us the “correct” answer. It’s research, for crying out loud! We may not really even know what the “correct” answer is. But, our scientific intuition can be trusted in these cases to identify obviously wrong results and results that are reasonably plausible. For regression results, we define acceptable results as those that we trust from a scientific and research perspective, even if we don’t know if they are absolutely correct.&lt;/p&gt;
+
+&lt;p&gt;So how do “currently accepted results” help? Well, via results comparison activities, of course! For each important change to the research software, a new result set can be generated. These are then compared to the old results set. If the comparison shows that the results haven’t changed – great! If a change has occurred, then an investigation needs to be done to determine why the change and if the new results set should be considered the new “currently accepted”. Each set of “currently accepted results” is a new line in the sand.&lt;/p&gt;
+
+&lt;p&gt;It’s important to remember that the new results are not necessarily wrong – just new. It’s up to the folks with scientific and software expertise to decide which results set should be the “currently accepted” one. Maybe you fixed a bug and the new results are better. Maybe you accidently introduced a bug and the old results are more trustworthy. The investigation is the process through which that discovery is made.&lt;/p&gt;
+
+&lt;p&gt;In the case of my project, everything became healthier once we had baseline regression results in place. And once we forced ourselves to pay attention to them. We could change the code and feel fairly comfortable that we would know if we did something subtly bad. And doing these investigations became a really good mechanism to learn the code and all it’s legacy nuances (can you say “skeletons in the closet”?). And it gave us a data-based context for our discussion about what changes were good ones. Regression testing saved us.&lt;/p&gt;
+
+&lt;p&gt;Of course, we did have to constantly generate new regression results for each code change. That was a good opportunity for some continuous integration automation! And we did need regression results that covered the full input spectrum. But, that’s a different topic.&lt;/p&gt;</content><author><name>Stuart Bowman</name></author><summary type="html">Every time my development team touched the code to introduce a new research feature, we ran the risk of changing historically accepted output results -- without even knowing it.</summary></entry></feed>
