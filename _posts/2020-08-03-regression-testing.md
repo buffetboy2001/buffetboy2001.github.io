@@ -2,7 +2,7 @@
 layout: single
 title:  "Regression Testing: Drawing Lines in the Sand"
 date:  2020-08-03
-tags: #testing
+tags: [software]
 excerpt: Every time my development team touched the code to introduce a new research feature, we ran the risk of changing historically accepted output results -- without even knowing it.
 ---
 

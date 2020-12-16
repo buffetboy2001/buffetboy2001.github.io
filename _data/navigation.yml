@@ -1,13 +1,14 @@
 # main links links
+# this file parsed by masthead.html, line 10
 main:
   - title: "About"
     url: /about/
 
-  # - title: "Research"
-  #   url: /research/
+  - title: "Research"
+    url: /research/
 
-  # - title: "Publications"
-  #   url: /publications/
-
-  # - title: "Software"
-  #   url: /software/
+  - title: "Software"
+    url: /software/
+    
+  - title: "Blog Tags"
+    url: /tags/
