@@ -34,4 +34,4 @@ Why do I go by `buffetboy2001` [on GitHub](https://github.com/buffetboy2001)? So
 
 ## What's With the Avatar
 
-There are legitimate reasons to shy away from plastering one's image all over the place. My image, in the form of a picture or drawing or whatever, is not who I am. So, I prefer to use a logo rather than a face. My logo is a snippet of a still life painting by American 19th century painter [John Frederick Peto](https://en.wikipedia.org/wiki/John_F._Peto). The contents of this particular still-life painting, beer steins and tobacco pipes, represent a place of familiar comfort to me.
+There are legitimate reasons to shy away from plastering one's image all over the place. My image, in the form of a picture or drawing or whatever, is not who I am. So, I prefer to use a logo rather than a face. My logo is a snippet of a still life painting by American 19th century painter [John Frederick Peto](https://en.wikipedia.org/wiki/John_F._Peto). The contents of this particular still-life painting, beer steins and tobacco pipes and such, represent a place of familiar comfort to me.
