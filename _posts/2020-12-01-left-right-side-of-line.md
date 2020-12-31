@@ -10,7 +10,7 @@ I was working on a very interesting (and frustrating) algorithm recently at work
 
 _Updated 2020-Dec-29 with_:
 
-* A working Jupyter Notebook [here](https://nbviewer.jupyter.org/github/buffetboy2001/buffetboy2001.github.io/blob/gh-pages/notebooks/2020-12-01-solution.ipynb) that shows this algorithm implemented in Python3.
+* A working Jupyter Notebook [here](https://nbviewer.jupyter.org/github/buffetboy2001/buffetboy2001.github.io/blob/gh-pages/notebooks/2020-12-01/2020-12-01-solution.ipynb) that shows this algorithm implemented in Python3.
 * Tweaks to the algorithm description below.
 
 ## Problem Statement
@@ -69,4 +69,4 @@ Of course, I constrained my solution to a particular region of the globe. But, i
 
 Do you have a better way to solve this? [Let me know by starting a GitHub Discussion!](https://github.com/buffetboy2001/buffetboy2001.github.io/discussions)
 
-When I get the chance, I'll post an implementation of this in a Jupyter Notebook. :thumbsup:  (Done! [Take a look](https://nbviewer.jupyter.org/github/buffetboy2001/buffetboy2001.github.io/blob/gh-pages/notebooks/2020-12-01-solution.ipynb))
+When I get the chance, I'll post an implementation of this in a Jupyter Notebook. :thumbsup:  (Done! [Take a look](https://nbviewer.jupyter.org/github/buffetboy2001/buffetboy2001.github.io/blob/gh-pages/notebooks/2020-12-01/2020-12-01-solution.ipynb))
