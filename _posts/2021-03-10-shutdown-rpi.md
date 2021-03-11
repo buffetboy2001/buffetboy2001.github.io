@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Hey Pi, Shutdown!"
-date:  2020-03-10
+date:  2021-03-10
 tags: ['robotics']
 excerpt: I needed them to learn to shutdown their Raspberry Pi the safe way. 
 ---
