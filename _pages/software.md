@@ -27,4 +27,6 @@ I'm a proud technical staff employee of the [MITRE Corporation](https://www.mitr
 
 One of my personal delights has been to lead a Robotics class for high-schoolers in my local region. I keep all of my course materials in GitHub repos, because **#sharingisnice**
 
+**2021-2022 Xiaor Geek Tank/Adeept 4DOF Arm**: [https://www.aerosci.dev/cca_robotics_2021](https://www.aerosci.dev/cca_robotics_2021)
+
 **2020-2021 Line Following Vehicle**: [https://www.aerosci.dev/ccr_robotics_fall_2020](https://www.aerosci.dev/ccr_robotics_fall_2020)
