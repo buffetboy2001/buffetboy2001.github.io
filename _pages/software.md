@@ -27,7 +27,7 @@ I'm a proud technical staff employee of the [MITRE Corporation](https://www.mitr
 
 One of my personal delights has been to lead a Robotics class for high-schoolers at a local hybrid school. I keep all of my course materials in GitHub repos, because **#sharingisnice**
 
-**2024-2025 Lego Mindstorms Robot Inventor**: [https://www.aerosci.dev/cca_robotics_2023](https://www.aerosci.dev/cca_robotics_2024)
+**2024-2025 Lego Mindstorms Robot Inventor**: [https://www.aerosci.dev/cca_robotics_2024](https://www.aerosci.dev/cca_robotics_2024)
 
 **2023-2024 Lego Mindstorms Robot Inventor**: [https://www.aerosci.dev/cca_robotics_2023](https://www.aerosci.dev/cca_robotics_2023)
 
