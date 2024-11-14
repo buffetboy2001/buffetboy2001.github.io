@@ -21,13 +21,15 @@ I'm a proud technical staff employee of the [MITRE Corporation](https://www.mitr
 
 **Link**: [https://mitre.github.io/im_sample_algorithm/](https://mitre.github.io/im_sample_algorithm/)
 
-**Purpose**: A minimum "sample" implementation of the algorithms necessary to comply with [DO-361A](https://my.rtca.org/NC__Product?id=a1B1R00000BdQlmUAF). This is used as a reference by manufacturers seeking to implement Interval Management concepts in the Flight-deck. 
+**Purpose**: A minimum "sample" implementation of the algorithms necessary to comply with [DO-361A](https://my.rtca.org/NC__Product?id=a1B1R00000BdQlmUAF). This is used as a reference by manufacturers seeking to implement Interval Management concepts in the Flight-deck.
 
 ## Personal
 
 One of my personal delights has been to lead a Robotics class for high-schoolers at a local hybrid school. I keep all of my course materials in GitHub repos, because **#sharingisnice**
 
-**2023-2024 Lego Mindstorms Robot Inventor (Year 2)**: [https://www.aerosci.dev/cca_robotics_2023](https://www.aerosci.dev/cca_robotics_2023)
+**2024-2025 Lego Mindstorms Robot Inventor**: [https://www.aerosci.dev/cca_robotics_2023](https://www.aerosci.dev/cca_robotics_2024)
+
+**2023-2024 Lego Mindstorms Robot Inventor**: [https://www.aerosci.dev/cca_robotics_2023](https://www.aerosci.dev/cca_robotics_2023)
 
 **2022-2023 Lego Mindstorms Robot Inventor**: [https://www.aerosci.dev/cca_robotics_2022](https://www.aerosci.dev/cca_robotics_2022)
 
